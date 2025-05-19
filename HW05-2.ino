@@ -57,11 +57,11 @@ void setup() {
 
   // 온도 characteristic 등록 및 descriptor 추가
   dhtService->addCharacteristic(&dhtTemperatureCharacteristics);
-  dhtTemperatureCharacteristics.addDescriptor(new BLE2902()); // ✅ Android 호환
+  dhtTemperatureCharacteristics.addDescriptor(new BLE2902()); // Android 호환
 
   // 습도 characteristic 등록 및 descriptor 추가
   dhtService->addCharacteristic(&dhtHumidityCharacteristics);
-  dhtHumidityCharacteristics.addDescriptor(new BLE2902()); // ✅ Android 호환
+  dhtHumidityCharacteristics.addDescriptor(new BLE2902()); // Android 호환
 
   // 서비스 시작
   dhtService->start();
